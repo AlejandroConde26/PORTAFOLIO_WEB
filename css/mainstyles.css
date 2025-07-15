@@ -1,0 +1,235 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    background-color: rgba(17,17,17,255) !important;
+}
+*{
+    font-family: "Staatliches", sans-serif;
+}
+.main{
+    height: auto;
+}
+.header{
+    background-color: rgba(0,0,0,0);
+    max-height: 100%;
+}
+.parallax-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    .background-image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-image: url('images/fondoImage.jpg');
+        background-size: cover;
+        background-position: center;
+        transition: transform 0.5s ease-out;
+    }
+}
+/*Texto en movimiento*/
+.parallax-container .moving-text h4{
+    font-size: 35px;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+.parallax-container .moving-text h1{
+    font-weight: 700;
+    font-size: 85px;
+    color: rgb(248, 255, 40);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+}
+.parallax-container .moving-text h3{
+    font-size: 45px;
+    color: rgb(215, 215, 215);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 1);
+}
+.parallax-container .moving-text .btn-cv{
+    margin-top: 30px;
+    background-color: rgb(173, 30, 30);
+    width: 170px;
+    height: 50px;
+    border-radius: 50px;
+    border-style: none;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 700;
+    padding: 12px 10px;
+    transition: transform 0.3s ease-in-out;
+}
+.parallax-container .moving-text .btn-cv:hover{
+    background-color: rgb(196, 54, 54);
+    transform: scale(1.05);
+}
+.moving-text {
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    transition: transform 0.4s ease-out;
+}
+/*redes sociales*/
+.parallax-container .redes-sociales{
+    position: absolute;
+    top: 30%;
+    left: 90%;
+}
+
+.parallax-container .redes-sociales .social-icons li{
+    list-style: none;
+    padding: 10px;
+    font-size: 30px;
+}
+.parallax-container .redes-sociales .social-icons li a icon{
+    color: #fff;
+}
+.parallax-container .redes-sociales .social-icons li a icon:hover{
+    color: #c2bbbb;
+}
+/*NAVABR*/
+.navbar{
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0);
+    margin-top: 15px;
+    text-align: center;
+}
+.navbar .container-fluid .collapse{
+    padding-left: 255px;
+    font-weight: 400;
+    background-color:rgba(0, 0, 0, 0);
+}
+  
+/*media queryyy*/
+
+@media (max-width: 1020px) {
+    .parallax-container {
+        height: 77vh;
+    }
+    .parallax-container .redes-sociales {
+        top: 33%;
+        left: 87%;
+    }
+    .parallax-container .moving-text h1 {
+        font-weight: 700;
+        font-size: 77px;
+
+    }
+    .parallax-container .redes-sociales {
+        top: 28%;
+        left: 85%;
+    }
+    .navbar{
+        position: absolute;
+        background-color: rgba(0, 0, 0, 0);
+        margin-top: 18px;
+        z-index: 10 !important;
+    }
+    body{
+        overflow-y: auto;
+    }
+}
+@media (max-width: 991px) {
+    .navbar .container-fluid .collapse {
+        text-align: center;
+        padding: 0;
+    }
+    .moving-text {
+        top: 62%;
+        left: 40%;
+    }
+    .navbar .container-fluid {
+        justify-content: right !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .parallax-container .moving-text h1 {
+        font-weight: 700;
+        font-size: 65px;
+    }
+    .parallax-container .moving-text h4 {
+        font-size: 30px;
+    }
+    .parallax-container .moving-text h3 {
+        font-size: 37px;
+    }
+    .moving-text {
+        top: 57%;
+        left: 40%;
+    }
+    .parallax-container .redes-sociales .social-icons li {
+        font-size: 26px;
+    }
+    .parallax-container .redes-sociales {
+        top: 35%;
+        left: 83%;
+    }
+}
+@media (max-width: 500px) {
+    .parallax-container .moving-text h1 {
+        font-weight: 700;
+        font-size: 56px;
+    }
+    .parallax-container .moving-text h4 {
+        font-size: 31px;
+        color: rgb(0, 0, 0);
+    }
+    .parallax-container .moving-text h3 {
+        font-size: 38px;
+    }
+    .moving-text {
+        top: 40%;
+        left: 50%;
+        text-align: center;
+    }
+    .parallax-container .redes-sociales .social-icons li {
+        font-size: 37px;
+        padding: 0 5%;
+    }
+    .parallax-container .redes-sociales .social-icons{
+        display: flex;
+        padding: 0;
+        margin: 0;
+        justify-content: center;
+        align-items: center;
+    }
+    .parallax-container .redes-sociales {
+        top: 79%;
+        left: 0;
+        width: 100%;
+    }
+    .parallax-container .moving-text .btn-cv {
+        margin: 53px 40px 40px 40px;
+        width: 151px;
+        height: 47px;
+        font-size: 20px;
+        padding: 8px 9px;
+    }
+    .parallax-container {
+        position: relative;
+        width: 100%;
+        height: 91vh;
+        overflow: hidden;
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('images/fondo_movil.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+    }
+}
+
+  
